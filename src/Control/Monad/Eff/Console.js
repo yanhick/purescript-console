@@ -1,29 +1,32 @@
-"use strict";
+package control.monad.eff;
 
-exports.log = function (s) {
-  return function () {
-    console.log(s);
-    return {};
-  };
-};
+class ConsoleForeign {
+    public static function log (s) {
+      return function () {
+        trace(s);
+        return {};
+      };
+    };
 
-exports.warn = function (s) {
-  return function () {
-    console.warn(s);
-    return {};
-  };
-};
+    public static function warn (s) {
+      return function () {
+        trace(s);
+        return {};
+      };
+    };
 
-exports.error = function (s) {
-  return function () {
-    console.error(s);
-    return {};
-  };
-};
+    public static function error (s) {
+      return function () {
+        trace(s);
+        return {};
+      };
+    };
 
-exports.info = function (s) {
-  return function () {
-    console.info(s);
-    return {};
-  };
-};
+    public static function info (s) {
+      return function () {
+        trace(s);
+        return {};
+      };
+    };
+}
+
